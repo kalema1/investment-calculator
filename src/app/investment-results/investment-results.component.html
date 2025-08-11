@@ -1,7 +1,6 @@
 @if (!results) {
-
 <p class="center">Please Enter some values and press calculate</p>
-}
+} @else {
 
 <table>
   <thead>
@@ -15,7 +14,7 @@
   </thead>
 
   <tbody>
-    @for(result of results; track result.year) {
+    @for (result of results; track result.year) {
     <tr>
       <td>{{ result.year }}</td>
       <td>{{ result.valueEndOfYear }}</td>
@@ -27,3 +26,4 @@
     }
   </tbody>
 </table>
+}
